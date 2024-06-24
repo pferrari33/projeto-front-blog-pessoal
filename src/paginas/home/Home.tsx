@@ -1,14 +1,16 @@
-import React from "react";
-import './Home.css';
+import React, { useState } from "react";
 
 function Home() {
-    return (
-        <>
-        <h1 className="home">Home</h1>
-        <img src="./public/gatinho.png" alt="gatinho-joia" className="img"/>
-        
-        </>
-    );
-}
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  return (
+    <div>
+      {loggedIn ? (
+        <h1>Bem-vindo de volta!</h1>
+      ) : (
+        <button onClick={() => setLoggedIn(true)}>Entrar</button>
+      )}
+    </div>
+  );
+}
 export default Home;
