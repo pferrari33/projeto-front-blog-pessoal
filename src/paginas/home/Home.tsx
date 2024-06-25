@@ -8,7 +8,9 @@ function Home() {
       {loggedIn ? (
         <h1>Bem-vindo de volta!</h1>
       ) : (
-        <button onClick={() => setLoggedIn(true)}>Entrar</button>
+        <button
+        className="text-3xl font-mono border-2 border-black p-4 rounded bg-indigo-600 text-white "
+        onClick={() => setLoggedIn(true)}>Entrar</button>
       )}
     </div>
   );
